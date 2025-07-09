@@ -1,0 +1,85 @@
+body {
+  background: #FFD8E4;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bear-img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  position: relative;
+  width: 300px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+#yesBtn, #noBtn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 0;
+}
+
+#yesBtn {
+  background-color: #FF5E78;
+  color: white;
+  left: 50px;
+}
+
+#noBtn {
+  background-color: #FFC1C1;
+  color: white;
+  left: 160px;
+}
+
+.result-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) scale(1.5);
+  }
+}
